@@ -1,0 +1,5 @@
+.container {
+  // @include content-width('image');
+  margin: 0 auto;
+  @include spacing('md', ('padding-left', 'padding-right'));
+}

@@ -1,0 +1,55 @@
+.Food {
+  @include spacing(lg, column-gap);
+
+  @include bp(lg) {
+    columns: 100px 2;
+  }
+
+  @include bp(xl) {
+    columns: 100px 3;
+  }
+
+  &__category {
+    @include spacing(lg, margin-bottom);
+    break-inside: avoid-column;
+    -webkit-break-inside: avoid-column;
+    page-break-inside: avoid;
+
+    * {
+      break-inside: avoid-column;
+      -webkit-break-inside: avoid-column;
+      page-break-inside: avoid;
+    }
+  }
+
+  &__category-title {
+    padding-top: 0.2em;
+    @include spacing(xs, (padding-left, padding-right));
+    @include negative-spacing(xs, (margin-left, margin-right));
+    @include spacing(sm, margin-bottom);
+    background: black;
+    color: $c-main;
+  }
+
+  &__item {
+    @include spacing(sm, margin-bottom);
+  }
+
+  &__item-header {
+    @extend h3;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__item-title {
+    flex-grow: 1;
+    @include spacing(md, padding-right);
+  }
+
+  &__item-price {
+    @extend h3;
+    font-style: normal;
+  }
+}

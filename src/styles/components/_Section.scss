@@ -1,0 +1,22 @@
+.Section {
+  min-height: 100vh;
+
+  &--full {
+    .Section__content {
+      width: 100%;
+      max-width: 100%;
+      @extend .container;
+    }
+  }
+
+  &__header {
+    @extend .container;
+    text-align: center;
+    @include spacing(md, margin-bottom);
+  }
+
+  &__content {
+    @extend .container;
+    @include content-width(text);
+  }
+}

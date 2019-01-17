@@ -1,28 +1,52 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import { Provider } from './components/Utilities'
+import Header from './components/Header'
+import FrontPageContainer from './containers/FrontPageContainer'
+import OrderContainer from './containers/OrderContainer'
+import NoMatchPage from './components/pages/NoMatchPage'
+import Nav from './components/Nav'
+
+export const routes = {
+  frontpage: {
+    name: 'Frontpage',
+    path: '/',
+    component: FrontPageContainer,
+    exact: true,
+    show: false
+  },
+  order: {
+    name: 'Order',
+    path: '/order',
+    component: OrderContainer,
+    exact: true,
+    show: true
+  }
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <Router>
+        <Provider>
+          <Header />
+          <Switch>
+            {Object.keys(routes).map(key => (
+              <Route
+                key={routes[key].path}
+                exact={routes[key].exact}
+                path={routes[key].path}
+                component={routes[key].component}
+              />
+            ))}
+            <Route component={NoMatchPage} />
+          </Switch>
+          <Nav />
+        </Provider>
+      </Router>
+    )
   }
 }
 
-export default App;
+export default App

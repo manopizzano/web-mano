@@ -1,0 +1,16 @@
+.Hero {
+  @extend .container;
+  text-align: center;
+  width: 100%;
+  @include spacing(section, margin-bottom);
+
+  &__illustration {
+    width: 100%;
+    max-width: rem-calc(600);
+    @include spacing(lg, margin-bottom);
+  }
+
+  &__title {
+    @include spacing(sm, margin-bottom);
+  }
+}

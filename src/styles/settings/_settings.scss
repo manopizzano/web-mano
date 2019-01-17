@@ -1,0 +1,102 @@
+// Fonts
+$f-sans: 'Eurostile', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$f-serif: 'Traulha', Times, 'Times New Roman', serif;
+$f-bold: 700;
+
+// Colors
+$pink: #facad5;
+
+$c-main: $pink;
+$c-text: black;
+$c-border: black;
+$c-background: $pink;
+
+$breakpoints: (
+  sm: 0,
+  md: 550,
+  lg: 870,
+  xl: 1200,
+  xxl: 1600
+);
+
+$content-width: (
+  sm: (
+    text: 0,
+    image: 0
+  ),
+  md: (
+    text: 900,
+    image: 2000
+  )
+);
+
+// Spacing
+$spacing: (
+  sm: (
+    xs: 6,
+    sm: 12,
+    md: 24,
+    lg: 48,
+    section: 96
+  ),
+  md: (
+    xs: 6,
+    sm: 12,
+    md: 24,
+    lg: 48,
+    section: 96
+  ),
+  lg: (
+    xs: 6,
+    sm: 12,
+    md: 24,
+    lg: 48,
+    section: 96
+  )
+);
+
+// Typography
+$typography: (
+  sm: (
+    h1: 42,
+    h2: 42,
+    h3: 22,
+    h4: 20,
+    h5: 20,
+    h6: 20,
+    body: 20,
+    small: 14
+  ),
+  md: (
+    h1: 42,
+    h2: 42,
+    h3: 22,
+    h4: 20,
+    h5: 20,
+    h6: 20,
+    body: 20,
+    small: 14
+  ),
+  lg: (
+    h1: 42,
+    h2: 42,
+    h3: 22,
+    h4: 20,
+    h5: 20,
+    h6: 20,
+    body: 20,
+    small: 14
+  )
+);
+
+// Border
+$s-border__width: 2px;
+$border: $s-border__width solid $c-border;
+
+$s-border__width--large: 6px;
+$border--large: $s-border__width--large solid $c-border;
+
+// Trans
+$trans: 0.3s ease;
+$trans--fast: 0.12s ease;

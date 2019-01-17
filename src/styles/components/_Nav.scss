@@ -1,0 +1,47 @@
+.Nav {
+  @extend .container;
+  @extend h3;
+  @include spacing(sm, (padding-top, padding-bototm));
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background: $c-main;
+
+  &--is-dark {
+    color: $c-main;
+
+    .Nav__col--menu {
+      color: $c-main;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__col {
+    display: block;
+    width: 50%;
+
+    &--order,
+    &--menu {
+      font-style: normal;
+    }
+
+    &--menu {
+      position: relative;
+      text-align: right;
+      text-transform: uppercase;
+      padding-left: 1rem;
+
+      &:focus {
+        outline: transparent;
+      }
+    }
+  }
+}
