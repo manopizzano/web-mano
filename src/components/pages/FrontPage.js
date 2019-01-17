@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Hero from '../Hero'
-import { Section, Illustration } from '../Utilities'
+import { Section } from '../Utilities'
 import Food from '../Food'
 import FormBusiness from '../FormBusiness'
 import Divider from '../Divider'
@@ -10,11 +10,11 @@ export default class FrontPage extends Component {
     return (
       <div>
         <Hero />
-        <Divider />
+        <Divider illustration="chefFront" />
         <Section title="Menu" full>
           <Food />
         </Section>
-        <Divider />
+        <Divider illustration="dogRun" />
         <Section
           title="Bedrift"
           desc="Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet."
