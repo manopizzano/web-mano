@@ -90,6 +90,7 @@ export default class FormBusiness extends Component {
           onSubmit={this.handleSubmit}
           action="/"
           method="post"
+          netlify="true"
         >
           {!submitted && (
             <Fragment>
@@ -189,7 +190,12 @@ export default class FormBusiness extends Component {
           </p>
         </form>
         {/* <!-- A little help for the Netlify post-processing bots --> */}
-        <form name="businessform" netlify netlify-honeypot="bot-field" hidden>
+        <form
+          name="businessform"
+          netlify="true"
+          netlify-honeypot="bot-field"
+          hidden
+        >
           <input type="text" name="companyName" />
           <input type="email" name="email" />
           <textarea name="desc" />
