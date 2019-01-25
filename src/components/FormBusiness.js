@@ -146,6 +146,9 @@ export default class FormBusiness extends Component {
             anledning
           </p>
         )}
+        {submitted && error && (
+          <p>Beklager noe gikk feil. Vennligst prøv igjen</p>
+        )}
         <button onClick={this.resetForm}>Reset form</button>
       </form>
     )
