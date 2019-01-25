@@ -42,7 +42,7 @@ export default class FormBusiness extends Component {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'Bedriftsskjema', data })
+        body: this.encode({ 'form-name': 'Bedriftsskjema', ...data })
       })
         .then(response => {
           this.setState({
@@ -80,81 +80,110 @@ export default class FormBusiness extends Component {
       submitted
     } = this.state
     return (
-      <form
-        name="businessform"
-        className="Form"
-        data-netlify="true"
-        onSubmit={this.handleSubmit}
-        action="/"
-        method="post"
-      >
-        {!submitted && (
-          <Fragment>
-            <div className="Form__block">
-              <VisuallyHidden>
-                <label htmlFor="companyName">Name of company</label>
-              </VisuallyHidden>
-              <input
-                className="Form__input"
-                type="text"
-                id="companyName"
-                name="companyName"
-                placeholder="Name of company"
-                value={companyName}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="Form__block">
-              <VisuallyHidden>
-                <label htmlFor="email">Email</label>
-              </VisuallyHidden>
-              <input
-                className="Form__input"
-                type="text"
-                id="email"
-                name="email"
-                placeholder="e-mail"
-                value={email}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="Form__block">
-              <VisuallyHidden>
-                <label htmlFor="desc">
-                  Short description of what you seek:
-                </label>
-              </VisuallyHidden>
-              <textarea
-                className="Form__textarea"
-                type="text"
-                id="desc"
-                name="desc"
-                placeholder="Short description of what you seek:"
-                value={desc}
-                onChange={this.handleChange}
-              />
-            </div>
-            <button
-              className={cc({
-                button: true,
-                'button--disabled': !canSubmit
-              })}
-              onClick={this.handleSubmit}
-            >
-              Send
-            </button>
-          </Fragment>
-        )}
-        {submitted && success && (
-          <p>
-            Takk for din hendvendelse. Vi kommer tilbake til deg ved første
-            anledning
-          </p>
-        )}
-        {submitted && error && (
-          <p>Beklager noe gikk feil. Vennligst prøv igjen</p>
-        )}
-        <button onClick={this.resetForm}>Reset form</button>
+      // <form
+      //   name="businessform"
+      //   className="Form"
+      //   data-netlify="true"
+      //   onSubmit={this.handleSubmit}
+      //   action="/"
+      //   method="post"
+      // >
+      //   {!submitted && (
+      //     <Fragment>
+      //       <div className="Form__block">
+      //         <VisuallyHidden>
+      //           <label htmlFor="companyName">Name of company</label>
+      //         </VisuallyHidden>
+      //         <input
+      //           className="Form__input"
+      //           type="text"
+      //           id="companyName"
+      //           name="companyName"
+      //           placeholder="Name of company"
+      //           value={companyName}
+      //           onChange={this.handleChange}
+      //         />
+      //       </div>
+      //       <div className="Form__block">
+      //         <VisuallyHidden>
+      //           <label htmlFor="email">Email</label>
+      //         </VisuallyHidden>
+      //         <input
+      //           className="Form__input"
+      //           type="text"
+      //           id="email"
+      //           name="email"
+      //           placeholder="e-mail"
+      //           value={email}
+      //           onChange={this.handleChange}
+      //         />
+      //       </div>
+      //       <div className="Form__block">
+      //         <VisuallyHidden>
+      //           <label htmlFor="desc">
+      //             Short description of what you seek:
+      //           </label>
+      //         </VisuallyHidden>
+      //         <textarea
+      //           className="Form__textarea"
+      //           type="text"
+      //           id="desc"
+      //           name="desc"
+      //           placeholder="Short description of what you seek:"
+      //           value={desc}
+      //           onChange={this.handleChange}
+      //         />
+      //       </div>
+      //       <button
+      //         className={cc({
+      //           button: true,
+      //           'button--disabled': !canSubmit
+      //         })}
+      //         onClick={this.handleSubmit}
+      //       >
+      //         Send
+      //       </button>
+      //     </Fragment>
+      //   )}
+      //   {submitted && success && (
+      //     <p>
+      //       Takk for din hendvendelse. Vi kommer tilbake til deg ved første
+      //       anledning
+      //     </p>
+      //   )}
+      //   {submitted && error && (
+      //     <p>Beklager noe gikk feil. Vennligst prøv igjen</p>
+      //   )}
+      //   <button onClick={this.resetForm}>Reset form</button>
+      // </form>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>
+            Your Name: <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email: <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Role:{' '}
+            <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name="message" />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
     )
   }
