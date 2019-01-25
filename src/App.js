@@ -22,6 +22,13 @@ export const routes = {
     component: OrderContainer,
     exact: true,
     show: true
+  },
+  order: {
+    name: 'Success',
+    path: '/pages/success',
+    component: FrontPageContainer,
+    exact: true,
+    show: false
   }
 }
 
