@@ -4,6 +4,7 @@ import { Section } from '../Utilities'
 import Food from '../Food'
 import FormBusiness from '../FormBusiness'
 import Divider from '../Divider'
+import TestForm from '../TestForm'
 
 export default class FrontPage extends Component {
   render() {
@@ -20,6 +21,7 @@ export default class FrontPage extends Component {
           desc="Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet."
         >
           <FormBusiness />
+          <TestForm />
         </Section>
       </div>
     )

@@ -45,6 +45,7 @@ export default class FormBusiness extends Component {
         body: this.encode({ 'form-name': 'Bedriftsskjema', ...data })
       })
         .then(response => {
+          console.log(response)
           this.setState({
             success: true,
             submitted: true
@@ -52,6 +53,7 @@ export default class FormBusiness extends Component {
         })
         .catch(error => {
           // console.log(error)
+          console.log(error)
           this.setState({
             success: false,
             submitted: true,
