@@ -34,10 +34,15 @@ export default class FormBusiness extends Component {
     const { canSubmit } = this.state
 
     if (canSubmit) {
+      const data = {
+        companyName: this.state.companyName,
+        email: this.state.email,
+        desc: this.state.desc
+      }
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'Bedriftsskjema', ...this.state.data })
+        body: this.encode({ 'form-name': 'Bedriftsskjema', data })
       })
         .then(response => {
           this.setState({
