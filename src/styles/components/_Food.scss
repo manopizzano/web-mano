@@ -10,7 +10,7 @@
   }
 
   &__category {
-    @include spacing(lg, margin-bottom);
+    @include spacing(lg, padding-bottom);
     break-inside: avoid-column;
     -webkit-break-inside: avoid-column;
     page-break-inside: avoid;
