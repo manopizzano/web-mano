@@ -188,6 +188,12 @@ export default class FormBusiness extends Component {
             <button type="submit">Send</button>
           </p>
         </form>
+        {/* <!-- A little help for the Netlify post-processing bots --> */}
+        <form name="businessform" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="companyName" />
+          <input type="email" name="email" />
+          <textarea name="desc" />
+        </form>
       </div>
     )
   }

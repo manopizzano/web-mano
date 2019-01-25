@@ -23,7 +23,7 @@ export const routes = {
     exact: true,
     show: true
   },
-  order: {
+  form: {
     name: 'Success',
     path: '/pages/success',
     component: FrontPageContainer,
