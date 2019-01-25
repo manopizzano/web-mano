@@ -7,7 +7,7 @@ export default class FormBusiness extends Component {
   }
   render() {
     return (
-      <form className="Form">
+      <form name="businessform" className="Form" netlify>
         <div className="Form__block">
           <VisuallyHidden>
             <label htmlFor="companyName">Name of company</label>
