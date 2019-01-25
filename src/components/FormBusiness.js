@@ -75,7 +75,14 @@ export default class FormBusiness extends Component {
       submitted
     } = this.state
     return (
-      <form name="businessform" className="Form" data-netlify="true">
+      <form
+        name="businessform"
+        className="Form"
+        data-netlify="true"
+        onSubmit={this.handleSubmit}
+        action="/"
+        method="post"
+      >
         {!submitted && (
           <Fragment>
             <div className="Form__block">
@@ -139,6 +146,7 @@ export default class FormBusiness extends Component {
             anledning
           </p>
         )}
+        <button onClick={this.resetForm}>Reset form</button>
       </form>
     )
   }
