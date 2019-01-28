@@ -9,6 +9,7 @@ import FrontPageContainer from './containers/FrontPageContainer'
 import OrderContainer from './containers/OrderContainer'
 import NoMatchPage from './components/pages/NoMatchPage'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 export const routes = {
   frontpage: {
@@ -52,6 +53,7 @@ class App extends Component {
             <Route component={NoMatchPage} />
           </Switch>
           <Nav />
+          <Footer />
         </Provider>
       </Router>
     )

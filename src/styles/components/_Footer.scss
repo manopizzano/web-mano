@@ -1,0 +1,28 @@
+.Footer {
+  @extend .container;
+  height: rem-calc(400);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include bp(md) {
+    flex-direction: row;
+  }
+
+  &__col {
+    @extend .editor;
+    width: 50%;
+    margin-bottom: spacing(md, sm);
+  }
+
+  &__icon {
+    width: rem-calc(40);
+    height: rem-calc(40);
+  }
+
+  &__link {
+    @include spacing(xs, margin);
+  }
+}

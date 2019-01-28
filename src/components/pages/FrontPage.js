@@ -5,7 +5,6 @@ import content from '../../utils/content'
 import PageWrapper from '../Utilities/PageWrapper'
 import { Section } from '../Utilities'
 import Hero from '../Hero'
-import Food from '../Food'
 import Divider from '../Divider'
 
 export default class FrontPage extends Component {
@@ -15,8 +14,8 @@ export default class FrontPage extends Component {
       <PageWrapper>
         <Hero />
         <Divider illustration="chef" />
-        <Section id={menu.id} title={menu.title} full>
-          <Food />
+        <Section id={menu.id} title={menu.title} desc={menu.desc} full>
+          {menu.content}
         </Section>
         <Divider />
         <Section id={business.id} title={business.title} desc={business.desc}>
