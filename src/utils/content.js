@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 
-import FormBusiness from '../components/FormBusiness'
 import { Image } from '../components/Utilities'
+import FormBusiness from '../components/FormBusiness'
+import Food from '../components/Food'
 
 const data = {
   address: 'Pedersgt. 8',
@@ -20,13 +21,30 @@ export default {
     id: 'hero',
     showInMenu: false,
     desc: (
-      <p>
+      <h3>
         {data.address}, {data.city} <br /> Åpent mandag-søndag 10-22
-      </p>
+      </h3>
     )
   },
   menu: {
     id: 'menu',
+    desc: (
+      <Fragment>
+        <p>
+          Mano betyr «hånd» og pizza er håndverk. Derfor lager vi den for hånd
+          på tradisjonelt napolitansk vis. Deigen hviler i minst ett døgn og
+          strekkes ut for hånd. Kombinert med vår egen pizzasaus av
+          Toscana-tomater,gir den lette og luftige deigen det vi synes er den
+          perfekte pizza.
+        </p>
+      </Fragment>
+    ),
+    content: (
+      <Fragment>
+        {/* Matlinjal her */}
+        <Food />
+      </Fragment>
+    ),
     showInMenu: true,
     title: 'Menu'
   },
@@ -48,10 +66,10 @@ export default {
     title: 'Om oss',
     desc: (
       <p>
-        Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam
-        eget risus varius blandit sit amet non magna. Duis mollis, est non
-        commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-        elit.
+        Mano betyr «hånd» og pizza er håndverk. Derfor lager vi den for hånd på
+        tradisjonelt napolitansk vis. Deigen hviler i minst ett døgn og strekkes
+        ut for hånd. Kombinert med vår egen pizzasaus av Toscana-tomater,gir den
+        lette og luftige deigen det vi synes er den perfekte pizza.
       </p>
     ),
     content: (
