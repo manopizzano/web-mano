@@ -53,6 +53,7 @@ export default class Illustration extends Component {
     return (
       <img
         className={cc({
+          Illustration: true,
           [className]: className
         })}
         src={`/assets/illustrations/${image}`}

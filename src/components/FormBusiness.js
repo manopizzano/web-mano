@@ -8,6 +8,9 @@ export default class FormBusiness extends Component {
     companyName: '',
     email: '',
     desc: '',
+    companyNameError: '',
+    emailError: '',
+    descError: '',
     canSubmit: false,
     success: null,
     error: null,
@@ -23,15 +26,43 @@ export default class FormBusiness extends Component {
       [e.target.name]: e.target.value
     })
 
-    if (companyName && email && desc) {
-      this.setState({
-        canSubmit: true
-      })
+    // if (companyName && email && desc) {
+    //   this.setState({
+    //     canSubmit: true
+    //   })
+    // }
+  }
+  validateInputs = () => {
+    const { companyName, email, desc } = this.state
+    let canSubmit = false
+
+    if (companyName.length > 1) {
+      canSubmit = true
+    } else {
+      canSubmit = false
+      this.setState({ companyNameError: 'Selskapet mangler navn' })
     }
+
+    var re = /\S+@\S+\.\S+/
+    if (re.test(email)) {
+      canSubmit = true
+    } else {
+      canSubmit = false
+      this.setState({ emailError: 'Epost er ikke gyldig' })
+    }
+
+    if (desc.length > 1) {
+      canSubmit = true
+    } else {
+      canSubmit = false
+      this.setState({ descError: 'Det mangler en beskrivelse' })
+    }
+
+    return canSubmit
   }
   handleSubmit = e => {
     e.preventDefault()
-    const { canSubmit } = this.state
+    const { canSubmit } = this.validateInputs()
 
     if (canSubmit) {
       const data = {
@@ -76,6 +107,9 @@ export default class FormBusiness extends Component {
       companyName,
       email,
       desc,
+      companyNameError,
+      emailError,
+      descError,
       canSubmit,
       success,
       error,
@@ -99,7 +133,10 @@ export default class FormBusiness extends Component {
                   <label htmlFor="companyName">Name of company</label>
                 </VisuallyHidden>
                 <input
-                  className="Form__input"
+                  className={cc({
+                    Form__input: true,
+                    'Form__input--error': companyNameError
+                  })}
                   type="text"
                   id="companyName"
                   name="companyName"
@@ -107,13 +144,19 @@ export default class FormBusiness extends Component {
                   value={companyName}
                   onChange={this.handleChange}
                 />
+                {companyNameError && (
+                  <p className="Form__message">{companyNameError}</p>
+                )}
               </div>
               <div className="Form__block">
                 <VisuallyHidden>
                   <label htmlFor="email">Email</label>
                 </VisuallyHidden>
                 <input
-                  className="Form__input"
+                  className={cc({
+                    Form__input: true,
+                    'Form__input--error': emailError
+                  })}
                   type="text"
                   id="email"
                   name="email"
@@ -121,6 +164,7 @@ export default class FormBusiness extends Component {
                   value={email}
                   onChange={this.handleChange}
                 />
+                {emailError && <p className="Form__message">{emailError}</p>}
               </div>
               <div className="Form__block">
                 <VisuallyHidden>
@@ -129,7 +173,10 @@ export default class FormBusiness extends Component {
                   </label>
                 </VisuallyHidden>
                 <textarea
-                  className="Form__textarea"
+                  className={cc({
+                    Form__textarea: true,
+                    'Form__textarea--error': emailError
+                  })}
                   type="text"
                   id="desc"
                   name="desc"
@@ -137,16 +184,18 @@ export default class FormBusiness extends Component {
                   value={desc}
                   onChange={this.handleChange}
                 />
+                {descError && <p className="Form__message">{descError}</p>}
               </div>
               <button
                 className={cc({
-                  button: true,
-                  'button--disabled': !canSubmit
+                  button: true
+                  // 'button--disabled': !canSubmit
                 })}
                 onClick={this.handleSubmit}
               >
                 Send
               </button>
+              {error}
             </Fragment>
           )}
           {submitted && success && (
@@ -158,7 +207,6 @@ export default class FormBusiness extends Component {
           {submitted && error && (
             <p>Beklager noe gikk feil. Vennligst prøv igjen</p>
           )}
-          <button onClick={this.resetForm}>Reset form</button>
         </form>
       </div>
     )

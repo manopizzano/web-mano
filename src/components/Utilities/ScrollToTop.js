@@ -6,6 +6,7 @@ export default class ScrollToTop extends Component {
   }
 
   render() {
+    console.log('scroll to top fired')
     return null
   }
 }

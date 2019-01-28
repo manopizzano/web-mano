@@ -18,10 +18,16 @@
   blockquote {
     // @include content-width('text');
   }
+
   p {
     @include spacing('sm', 'margin-bottom');
   }
+
   a {
     text-decoration: underline;
+  }
+
+  img {
+    @include spacing('lg', 'margin-bottom');
   }
 }

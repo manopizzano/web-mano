@@ -1,18 +1,25 @@
 import React, { Component } from 'react'
 
-import { Illustration } from './Utilities'
+import content from '../utils/content'
+
+import { Illustration, Consumer } from './Utilities'
 
 export default class Hero extends Component {
   render() {
+    const { hero } = content
+    if (!hero) return null
     return (
-      <div className="Hero">
-        <Illustration className="Hero__illustration" name="chef2" />
-        <h2 className="Hero__title">Mano pizza</h2>
-        <p className="Hero__tagline">
-          Pedersgt 8, Stavanger <br />
-          Åpent mandag-søndag 10-22
-        </p>
-      </div>
+      <Consumer>
+        {({ state }) => (
+          <div className="Hero">
+            <Illustration className="Hero__illustration" name="chef2" />
+            <div className="Hero__content">
+              {hero.title && <h2 className="Hero__title">{hero.title}</h2>}
+              {hero.desc && <div className="Hero__tagline">{hero.desc}</div>}
+            </div>
+          </div>
+        )}
+      </Consumer>
     )
   }
 }

@@ -1,4 +1,5 @@
 .WeOrder {
   width: 100%;
-  height: 100vh;
+  @include minusHeaderHeight;
+  @include spacing('lg', 'padding-bottom');
 }

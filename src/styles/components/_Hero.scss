@@ -1,13 +1,13 @@
 .Hero {
   @extend .container;
+  @include minusHeaderHeight;
   text-align: center;
   width: 100%;
-  @include spacing(section, margin-bottom);
-  height: 50vh;
+  @include spacing(section, padding-bottom);
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  min-height: 460px;
 
   &__illustration {
     max-width: rem-calc(300);

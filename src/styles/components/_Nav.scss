@@ -1,7 +1,7 @@
 .Nav {
   @extend .container;
   @extend h3;
-  @include spacing(sm, (padding-top, padding-bototm));
+  @include spacing(sm, (padding-top, padding-bottom));
   position: fixed;
   bottom: 0;
   left: 0;

@@ -3,10 +3,16 @@ import Helmet from 'react-helmet'
 
 class SEO extends Component {
   render() {
-    const title = 'MANO – PIZZA AL METRO'
-    const description = 'Åpner snart i Stavanger!'
-    const cannonical = 'https://mano.pizza'
-    const image = `${cannonical}/assets/images/seo.png`
+    const title = this.props.content
+      ? this.props.content.title
+      : 'MANO – PIZZA AL METRO'
+    const description = this.props.content
+      ? this.props.content.description
+      : 'Åpner snart i Stavanger!'
+    const cannonical = this.props.content
+      ? this.props.content.cannonical
+      : 'https://mano.pizza'
+    const image = `https://mano.pizza/assets/images/seo.png`
     const meta = [
       // Google / Search engines in general
       { name: 'description', content: description },

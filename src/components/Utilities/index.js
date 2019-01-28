@@ -10,6 +10,7 @@ import VisuallyHidden from './VisuallyHidden'
 import Illustration from './Illustration'
 import Section from './Section'
 import Error from './Error'
+import ScrollLink from './ScrollLink'
 
 export {
   Html,
@@ -24,5 +25,6 @@ export {
   VisuallyHidden,
   Illustration,
   Section,
-  Error
+  Error,
+  ScrollLink
 }

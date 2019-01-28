@@ -1,8 +1,17 @@
 import React, { Component, Fragment } from 'react'
-import ReactHtmlParser from 'react-html-parser'
+import Parser from 'html-react-parser'
+
+const stripHTMLTags = str => str.replace(/<[^>]*>/g, '')
 
 export default class Html extends Component {
+  static defaultProps = {
+    el: 'span'
+  }
   render() {
-    return <Fragment>{ReactHtmlParser(this.props.content)}</Fragment>
+    let { stripTags, content } = this.props
+    if (stripTags) {
+      content = stripHTMLTags(content)
+    }
+    return <Fragment>{Parser(content)}</Fragment>
   }
 }

@@ -12,11 +12,23 @@
   &__header {
     @extend .container;
     text-align: center;
+    @include content-width('text');
     @include spacing(md, margin-bottom);
+  }
+
+  &__title {
+    @include spacing(md, margin-bottom);
+  }
+
+  &__desc {
+    @extend .editor;
+    max-width: rem-calc(400);
+    margin: 0 auto;
   }
 
   &__content {
     @extend .container;
+    @extend .editor;
     @include content-width(text);
   }
 }

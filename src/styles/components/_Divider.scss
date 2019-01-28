@@ -1,11 +1,16 @@
 .Divider {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__image {
-    max-width: rem-calc(500);
-    max-height: rem-calc(400);
+    // max-width: rem-calc(274);
+    // max-height: rem-calc(271);
+
+    // @include bp(lg) {
+    //   max-width: rem-calc(500);
+    //   max-height: rem-calc(400);
+    // }
   }
 }

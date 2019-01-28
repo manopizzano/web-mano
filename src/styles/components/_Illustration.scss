@@ -1,0 +1,9 @@
+.Illustration {
+  max-width: rem-calc(274);
+  max-height: rem-calc(271);
+
+  @include bp(lg) {
+    max-width: rem-calc(500);
+    max-height: rem-calc(400);
+  }
+}

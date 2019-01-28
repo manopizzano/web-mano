@@ -1,0 +1,35 @@
+[
+  {
+    "id": "pizza2",
+    "aspect": "2560/1707",
+    "srcset": {
+      "320": "./assets/images/uploads/-images/pizza2-320x214.jpg",
+      "640": "./assets/images/uploads/-images/pizza2-640x427.jpg",
+      "1024": "./assets/images/uploads/-images/pizza2-1024x683.jpg",
+      "1440": "./assets/images/uploads/-images/pizza2-1440x960.jpg",
+      "2560": "./assets/images/uploads/-images/pizza2-2560x1707.jpg"
+    }
+  },
+  {
+    "id": "map",
+    "aspect": "2560/1938",
+    "srcset": {
+      "320": "./assets/images/uploads/-images/map-320x243.jpg",
+      "640": "./assets/images/uploads/-images/map-640x485.jpg",
+      "1024": "./assets/images/uploads/-images/map-1024x775.jpg",
+      "1440": "./assets/images/uploads/-images/map-1440x1090.jpg",
+      "2560": "./assets/images/uploads/-images/map-2560x1938.jpg"
+    }
+  },
+  {
+    "id": "pizza1",
+    "aspect": "2560/1710",
+    "srcset": {
+      "320": "./assets/images/uploads/-images/pizza1-320x214.jpg",
+      "640": "./assets/images/uploads/-images/pizza1-640x428.jpg",
+      "1024": "./assets/images/uploads/-images/pizza1-1024x684.jpg",
+      "1440": "./assets/images/uploads/-images/pizza1-1440x962.jpg",
+      "2560": "./assets/images/uploads/-images/pizza1-2560x1710.jpg"
+    }
+  }
+]
