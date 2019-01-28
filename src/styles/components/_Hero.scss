@@ -3,11 +3,18 @@
   text-align: center;
   width: 100%;
   @include spacing(section, margin-bottom);
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
 
   &__illustration {
-    width: 100%;
-    max-width: rem-calc(600);
+    max-width: rem-calc(300);
+    max-height: rem-calc(300);
     @include spacing(lg, margin-bottom);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__title {

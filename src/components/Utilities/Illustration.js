@@ -2,17 +2,21 @@ import React, { Component } from 'react'
 import cc from 'classcat'
 
 const images = {
-  chefFront: 'chef-front.png',
-  chefPizza: 'chef-pizza.png',
-  chef: 'chef.png',
-  dogRun: 'dog-run.png',
-  dog: 'hund.png',
-  capitalist: 'kapitalist.png',
-  mug: 'mugshot.png',
+  cash: 'cash.png',
+  chase: 'chase.png',
+  chef: 'Chef.png',
+  chef2: 'Chef2.png',
+  chef3: 'Chef3.png',
+  dog: 'Dog.png',
+  focaccia: 'Focaccia.png',
+  ruler: 'linjal.png',
   nun: 'nun.png',
-  small: 'pizzaboks-liten.png',
-  large: 'pizzaboks-stor.png',
-  sleeping: 'sovande-polis.png'
+  pizza: 'pizza.png',
+  police: 'Police.png',
+  slice: 'Slice.png',
+  svin: 'Svin1.png',
+  svin2: 'Svin2.png',
+  teeth: 'Teeth.png'
 }
 
 export default class Illustration extends Component {

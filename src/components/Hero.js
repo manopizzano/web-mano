@@ -6,7 +6,7 @@ export default class Hero extends Component {
   render() {
     return (
       <div className="Hero">
-        <Illustration className="Hero__illustration" name="dog" />
+        <Illustration className="Hero__illustration" name="chef2" />
         <h2 className="Hero__title">Mano pizza</h2>
         <p className="Hero__tagline">
           Pedersgt 8, Stavanger <br />

@@ -11,11 +11,11 @@ export default class FrontPage extends Component {
     return (
       <div>
         <Hero />
-        <Divider illustration="chefFront" />
+        <Divider illustration="chef" />
         <Section title="Menu" full>
           <Food />
         </Section>
-        <Divider illustration="dogRun" />
+        <Divider />
         <Section
           title="Bedrift"
           desc="Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet."
