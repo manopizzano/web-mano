@@ -21,7 +21,6 @@ export default class FormBusiness extends Component {
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
   handleChange = e => {
-    const { companyName, email, desc } = this.state
     this.setState({
       [e.target.name]: e.target.value
     })
@@ -110,7 +109,6 @@ export default class FormBusiness extends Component {
       companyNameError,
       emailError,
       descError,
-      canSubmit,
       success,
       error,
       submitted
