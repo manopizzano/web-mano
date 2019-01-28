@@ -24,6 +24,7 @@
     @extend h1;
     display: inline-block;
     animation: fade-up 0.5s $trans--fast both;
+    hyphens: auto;
 
     &:last-of-type {
       @include spacing(section, margin-bottom);

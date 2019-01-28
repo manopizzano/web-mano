@@ -16,7 +16,7 @@ body {
 
 ::selection {
   color: $c-main;
-  background: black;
+  background: rgba(0, 0, 0, 0.99);
 }
 
 ::placeholder {
@@ -75,6 +75,7 @@ small,
 strong,
 .strong {
   font-weight: $f-bold;
+  font-style: normal;
 }
 
 *:focus {

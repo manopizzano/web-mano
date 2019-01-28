@@ -3,7 +3,7 @@ import cc from 'classcat'
 
 const images = {
   cash: 'cash.png',
-  chase: 'chase.png',
+  // chase: 'chase.png',
   chef: 'Chef.png',
   chef2: 'Chef2.png',
   chef3: 'Chef3.png',
@@ -34,7 +34,7 @@ export default class Illustration extends Component {
         this.setState({
           image: this.getRandomImage()
         })
-      }, 10000)
+      }, 200)
     }
   }
   getRandomImage = () => {

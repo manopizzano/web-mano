@@ -20,7 +20,7 @@
   }
 
   p {
-    @include spacing('sm', 'margin-bottom');
+    @include spacing('md', 'margin-bottom');
   }
 
   a {

@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 import { Image } from '../components/Utilities'
 import FormBusiness from '../components/FormBusiness'
 import Food from '../components/Food'
+import FoodRuler from '../components/FoodRuler'
 
 const data = {
   address: 'Pedersgt. 8',
@@ -37,11 +38,16 @@ export default {
           Toscana-tomater,gir den lette og luftige deigen det vi synes er den
           perfekte pizza.
         </p>
+        <h3>PIZZA PÅ METEREN</h3>
+        <p>
+          Lag din egen meter med pizza ved å kombinere våre ulike pizzaer
+          akkurat slik du selv vil.{' '}
+        </p>
       </Fragment>
     ),
     content: (
       <Fragment>
-        {/* Matlinjal her */}
+        <FoodRuler />
         <Food />
       </Fragment>
     ),
@@ -74,8 +80,7 @@ export default {
     ),
     content: (
       <div>
-        <Image id="pizza2" />
-        <Image id="pizza1" />
+        <Image id="pizzabox" />
       </div>
     )
   },

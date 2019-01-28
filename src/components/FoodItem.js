@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Html } from './Utilities'
 
 export default class FoodItem extends Component {
   render() {
@@ -6,10 +7,14 @@ export default class FoodItem extends Component {
     return (
       <li className="Food__item">
         <header className="Food__item-header">
-          <h4 className="Food__item-title">{item.name}</h4>
-          <p className="Food__item-price">{item.dPrice}</p>
+          {item.name && <h4 className="Food__item-title">{item.name}</h4>}
+          {item.price && <p className="Food__item-price">{item.dPrice}</p>}
         </header>
-        <p className="Food__item-desc">{item.desc}</p>
+        {item.desc && (
+          <p className="Food__item-desc">
+            <Html content={item.desc} />
+          </p>
+        )}
       </li>
     )
   }

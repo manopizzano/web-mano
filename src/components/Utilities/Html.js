@@ -9,6 +9,7 @@ export default class Html extends Component {
   }
   render() {
     let { stripTags, content } = this.props
+    console.log(content, typeof content)
     if (stripTags) {
       content = stripHTMLTags(content)
     }
