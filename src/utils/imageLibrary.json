@@ -1,13 +1,13 @@
 [
   {
     "id": "map",
-    "aspect": "2560/1938",
+    "aspect": "2560/1373",
     "srcset": {
-      "320": "./assets/images/uploads/-images/map-320x243.jpg",
-      "640": "./assets/images/uploads/-images/map-640x485.jpg",
-      "1024": "./assets/images/uploads/-images/map-1024x775.jpg",
-      "1440": "./assets/images/uploads/-images/map-1440x1090.jpg",
-      "2560": "./assets/images/uploads/-images/map-2560x1938.jpg"
+      "320": "./assets/images/uploads/-images/map-320x172.jpg",
+      "640": "./assets/images/uploads/-images/map-640x344.jpg",
+      "1024": "./assets/images/uploads/-images/map-1024x549.jpg",
+      "1440": "./assets/images/uploads/-images/map-1440x772.jpg",
+      "2560": "./assets/images/uploads/-images/map-2560x1373.jpg"
     }
   },
   {

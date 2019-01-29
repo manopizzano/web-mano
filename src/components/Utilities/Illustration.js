@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import cc from 'classcat'
+import { emptyGif } from '../../utils/lazysizes'
 
 const images = {
   cash: 'cash.png',
@@ -53,10 +54,12 @@ export default class Illustration extends Component {
     return (
       <img
         className={cc({
+          lazyload: true,
           Illustration: true,
           [className]: className
         })}
-        src={`/assets/illustrations/${image}`}
+        src={emptyGif}
+        data-src={`/assets/illustrations/${image}`}
         alt={`Illustrasjon av ${image.split('.png')[0]}`}
       />
     )

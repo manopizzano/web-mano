@@ -57,7 +57,7 @@ const generateThoseBasterds = new Promise(resolve => {
     // ALlow jpg only
     const filesFiltered = files.filter(filepath => {
       const ext = path.extname(filepath)
-      return ext === '.jpg'
+      return ext === '.jpg' || ext === '.png'
     })
 
     if (filesFiltered.length) {

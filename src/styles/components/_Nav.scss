@@ -3,8 +3,9 @@
   @include font-size(h3);
   @include spacing(sm, (padding-top, padding-bottom));
   position: fixed;
-  bottom: 0;
+  top: 100%;
   left: 0;
+  transform: translateY(-100%);
   width: 100%;
   z-index: 9;
   background: $c-main;
