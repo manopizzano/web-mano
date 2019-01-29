@@ -6,7 +6,8 @@ import './utils/lazysizes'
 import { Provider } from './components/Utilities'
 import Header from './components/Header'
 import FrontPageContainer from './containers/FrontPageContainer'
-import OrderContainer from './containers/OrderContainer'
+import OrderPage from './components/pages/OrderPage'
+import PrivacyPage from './components/pages/PrivacyPage'
 import NoMatchPage from './components/pages/NoMatchPage'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -22,17 +23,24 @@ export const routes = {
   order: {
     name: 'Order',
     path: '/order',
-    component: OrderContainer,
+    component: OrderPage,
     exact: true,
     show: true
   },
-  form: {
-    name: 'Success',
-    path: '/pages/success',
-    component: FrontPageContainer,
+  privacy: {
+    name: 'Privacy',
+    path: '/personvern',
+    component: PrivacyPage,
     exact: true,
-    show: false
+    show: true
   }
+  // form: {
+  //   name: 'Success',
+  //   path: '/pages/success',
+  //   component: FrontPageContainer,
+  //   exact: true,
+  //   show: false
+  // }
 }
 
 class App extends Component {

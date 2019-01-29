@@ -13,16 +13,16 @@
 
   &__col {
     @extend .editor;
-    width: 50%;
+    width: 100%;
     margin-bottom: spacing(md, sm);
+
+    @include bp(md) {
+      width: calc(100% / 3);
+    }
   }
 
-  &__icon {
-    width: rem-calc(40);
-    height: rem-calc(40);
-  }
-
-  &__link {
-    @include spacing(xs, margin);
+  &__social {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -59,10 +59,16 @@ export default {
     showInMenu: true,
     title: 'Bedrift',
     desc: (
-      <p>
-        Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam
-        eget risus varius blandit sit amet.
-      </p>
+      <Fragment>
+        <p>
+          Vil du bestille pizza i metervis til din bedrift? Send oss en melding
+          for å opprette bedriftsavtale.
+        </p>
+        <p>
+          Som bedriftskunde slipper dere oppgjør ved levering og vi sender dere
+          istedet faktura på e-post eller EHF.
+        </p>
+      </Fragment>
     ),
     content: <FormBusiness />
   },
@@ -114,6 +120,26 @@ export default {
           } hvor Mano Pizza ligger`}
         />
       </a>
+    )
+  },
+  privacy: {
+    title: 'Personvernerklæring',
+    desc: <p>Vi er veldig opptatt av ditt personvern</p>,
+    content: (
+      <div>
+        <section>
+          <h2>Skjema</h2>
+          <p>Vi lagrer din informasjon på epost.</p>
+        </section>
+        <section>
+          <h2>Google Analytics</h2>
+          <p>Tracking</p>
+        </section>
+        <section>
+          <h2>Facebook pixel</h2>
+          <p>Tracking</p>
+        </section>
+      </div>
     )
   }
 }

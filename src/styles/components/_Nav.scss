@@ -1,6 +1,6 @@
 .Nav {
   @extend .container;
-  @extend h3;
+  @include font-size(h3);
   @include spacing(sm, (padding-top, padding-bottom));
   position: fixed;
   bottom: 0;
@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 9;
   background: $c-main;
+  // border-top: $border;
 
   &--is-dark {
     color: $c-main;
@@ -30,7 +31,11 @@
 
     &--order,
     &--menu {
-      font-style: normal;
+      @include bold;
+
+      // @include bp(xxl) {
+      //   @include font-size(h2);
+      // }
     }
 
     &--menu {
@@ -38,6 +43,7 @@
       text-align: right;
       text-transform: uppercase;
       padding-left: 1rem;
+      // border-left: $border;
 
       &:focus {
         outline: transparent;

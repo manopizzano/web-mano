@@ -9,6 +9,8 @@ export default class FormBusiness extends Component {
     email: '',
     desc: '',
     companyNameError: '',
+    gdpr: false,
+    gdprError: '',
     emailError: '',
     descError: '',
     canSubmit: false,
@@ -22,21 +24,21 @@ export default class FormBusiness extends Component {
       .join('&')
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value || e.target.checked
     })
-
-    // if (companyName && email && desc) {
-    //   this.setState({
-    //     canSubmit: true
-    //   })
-    // }
+  }
+  handleCheckboxChange = e => {
+    this.setState({
+      [e.target.name]: e.target.checked
+    })
   }
   validateInputs = () => {
-    const { companyName, email, desc } = this.state
+    const { companyName, email, desc, gdpr } = this.state
     let canSubmit = false
 
     if (companyName.length > 1) {
       canSubmit = true
+      this.setState({ companyNameError: null })
     } else {
       canSubmit = false
       this.setState({ companyNameError: 'Selskapet mangler navn' })
@@ -45,6 +47,7 @@ export default class FormBusiness extends Component {
     var re = /\S+@\S+\.\S+/
     if (re.test(email)) {
       canSubmit = true
+      this.setState({ emailError: null })
     } else {
       canSubmit = false
       this.setState({ emailError: 'Epost er ikke gyldig' })
@@ -52,9 +55,18 @@ export default class FormBusiness extends Component {
 
     if (desc.length > 1) {
       canSubmit = true
+      this.setState({ descError: null })
     } else {
       canSubmit = false
       this.setState({ descError: 'Det mangler en beskrivelse' })
+    }
+
+    if (gdpr) {
+      canSubmit = true
+      this.setState({ gdprError: null })
+    } else {
+      canSubmit = false
+      this.setState({ gdprError: 'Du må huke av over for å sende skjema' })
     }
 
     return canSubmit
@@ -106,9 +118,11 @@ export default class FormBusiness extends Component {
       companyName,
       email,
       desc,
+      gdpr,
       companyNameError,
       emailError,
       descError,
+      gdprError,
       success,
       error,
       submitted
@@ -128,7 +142,7 @@ export default class FormBusiness extends Component {
             <Fragment>
               <div className="Form__block">
                 <VisuallyHidden>
-                  <label htmlFor="companyName">Name of company</label>
+                  <label htmlFor="companyName">Navn på selskapet</label>
                 </VisuallyHidden>
                 <input
                   className={cc({
@@ -138,7 +152,7 @@ export default class FormBusiness extends Component {
                   type="text"
                   id="companyName"
                   name="companyName"
-                  placeholder="Name of company"
+                  placeholder="Navn på selskapet"
                   value={companyName}
                   onChange={this.handleChange}
                 />
@@ -148,7 +162,7 @@ export default class FormBusiness extends Component {
               </div>
               <div className="Form__block">
                 <VisuallyHidden>
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">Epost</label>
                 </VisuallyHidden>
                 <input
                   className={cc({
@@ -158,7 +172,7 @@ export default class FormBusiness extends Component {
                   type="text"
                   id="email"
                   name="email"
-                  placeholder="e-mail"
+                  placeholder="Epost"
                   value={email}
                   onChange={this.handleChange}
                 />
@@ -167,22 +181,38 @@ export default class FormBusiness extends Component {
               <div className="Form__block">
                 <VisuallyHidden>
                   <label htmlFor="desc">
-                    Short description of what you seek:
+                    Kort beskrivelse av det du ønsker
                   </label>
                 </VisuallyHidden>
                 <textarea
                   className={cc({
                     Form__textarea: true,
-                    'Form__textarea--error': emailError
+                    'Form__textarea--error': descError
                   })}
                   type="text"
                   id="desc"
                   name="desc"
-                  placeholder="Short description of what you seek:"
+                  placeholder="Kort beskrivelse av det du ønsker"
                   value={desc}
                   onChange={this.handleChange}
                 />
                 {descError && <p className="Form__message">{descError}</p>}
+              </div>
+              <div className="Form__block">
+                <label className="Form__label">
+                  <input
+                    className={cc({
+                      Form__checkbox: true,
+                      'Form__input--error': descError
+                    })}
+                    name="gdpr"
+                    type="checkbox"
+                    value={gdpr}
+                    onChange={this.handleCheckboxChange}
+                  />
+                  Jeg godkjenner at Mano Pizza lagrer min informasjon.
+                </label>
+                {gdprError && <p className="Form__message">{gdprError}</p>}
               </div>
               <button
                 className={cc({

@@ -1,0 +1,11 @@
+.Social {
+  display: flex;
+  &__icon {
+    width: rem-calc(40);
+    height: rem-calc(40);
+  }
+
+  &__link {
+    @include spacing(xs, margin);
+  }
+}

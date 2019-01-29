@@ -21,13 +21,15 @@
   }
 
   &__item {
-    @extend h1;
+    @include font-size(h1);
+    @include bold;
     display: inline-block;
     animation: fade-up 0.5s $trans--fast both;
     hyphens: auto;
 
-    &:last-of-type {
+    &:last-child {
       @include spacing(section, margin-bottom);
+      @include spacing(lg, margin-top);
     }
 
     @for $i from 1 through 10 {
@@ -39,6 +41,11 @@
     &--is-active {
       text-decoration: underline;
     }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
   }
 
   @keyframes fade-in {

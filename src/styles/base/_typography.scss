@@ -74,8 +74,7 @@ small,
 
 strong,
 .strong {
-  font-weight: $f-bold;
-  font-style: normal;
+  @include bold;
 }
 
 *:focus {

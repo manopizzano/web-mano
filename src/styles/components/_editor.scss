@@ -30,4 +30,8 @@
   img {
     @include spacing('lg', 'margin-bottom');
   }
+
+  section {
+    @include spacing('section', 'margin-bottom');
+  }
 }

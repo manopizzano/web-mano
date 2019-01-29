@@ -1,5 +1,5 @@
 .button {
-  @extend h3;
+  @include font-size(h3);
   padding: 0.45em 2em 0.35em;
   background-color: transparent;
   color: white;

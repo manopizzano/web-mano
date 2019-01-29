@@ -2,7 +2,7 @@
   text-align: center;
 
   &__logo {
-    font-style: normal;
+    @include bold;
     font-size: 23vw;
     line-height: 1;
   }

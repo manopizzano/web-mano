@@ -34,7 +34,7 @@ export default class Illustration extends Component {
         this.setState({
           image: this.getRandomImage()
         })
-      }, 200)
+      }, 10000)
     }
   }
   getRandomImage = () => {

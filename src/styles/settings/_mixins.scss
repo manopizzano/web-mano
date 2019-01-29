@@ -67,18 +67,13 @@
 // Font mixins
 
 @mixin italic {
+  font-weight: 500;
   font-style: italic;
-  font-weight: 400;
 }
 
-@mixin expanded {
-  font-stretch: expanded;
-  font-weight: 400;
-}
-
-@mixin bold-expanded {
-  font-stretch: expanded;
+@mixin bold {
   font-weight: 700;
+  font-style: normal;
 }
 
 @mixin headerHeight {

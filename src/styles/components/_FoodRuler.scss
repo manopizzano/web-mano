@@ -6,6 +6,7 @@
   &__ruler {
     margin: 0 auto;
     width: rem-calc(150);
+    max-width: rem-calc(700);
     border: $border--large;
     display: flex;
     flex-direction: column;
@@ -17,10 +18,7 @@
       width: auto;
       padding: 1em 2em 0 2em;
       flex-direction: row;
-    }
-
-    @include bp(xxl) {
-      max-width: calc(100% / 3);
+      width: 100%;
     }
   }
 
@@ -60,7 +58,7 @@
   }
 
   &__title {
-    font-style: normal;
+    @include bold;
     position: relative;
     &:after {
       content: ',-';

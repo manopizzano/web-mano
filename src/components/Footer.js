@@ -1,27 +1,17 @@
 import React, { Component } from 'react'
-import { Icon } from './Utilities'
+import { Link } from 'react-router-dom'
+
+import Social from './Social'
 
 export default class Footer extends Component {
   render() {
     return (
       <div className="Footer">
         <div className="Footer__col">
-          <a
-            className="Footer__link"
-            href="https://www.instagram.com/pizza_mano/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon className="Footer__icon" name="instagram" />
-          </a>
-          <a
-            className="Footer__link"
-            href="https://www.facebook.com/Manopizza/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon className="Footer__icon" name="facebook" />
-          </a>
+          <Link to="/personvern">Personvern</Link>
+        </div>
+        <div className="Footer__col">
+          <Social className="Footer__social" />
         </div>
         <div className="Footer__col">
           <p>

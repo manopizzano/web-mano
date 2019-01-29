@@ -7,6 +7,11 @@
     @include spacing(sm, margin-bottom);
   }
 
+  &__label {
+    display: block;
+    @include italic;
+  }
+
   &__input {
     border: $border;
     padding: 0.35em 0.45em 0.35em;
@@ -25,6 +30,25 @@
 
     &--error {
       animation: error 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+    }
+  }
+
+  &__checkbox {
+    @include spacing('xs', 'margin-right');
+    width: 1em;
+    height: 1em;
+    transition: box-shadow $trans--fast;
+    vertical-align: text-bottom;
+    box-shadow: inset 0 0 0 $s-border__width black,
+      inset 0 0 0 $s-border__width $pink, inset 0 0 0 $s-border__width black;
+
+    &:checked {
+      box-shadow: inset 0 0 0 $s-border__width black, inset 0 0 0 0.25em $pink,
+        inset 0 0 0 1em black;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 

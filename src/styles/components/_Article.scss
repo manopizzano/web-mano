@@ -1,0 +1,17 @@
+.Article {
+  @extend .container;
+
+  &__header {
+    @include content-width(text);
+    @include spacing('section', 'margin-bottom');
+  }
+
+  &__title {
+    @include spacing('md', 'margin-bottom');
+  }
+
+  &__content {
+    @extend .editor;
+    @include content-width(text);
+  }
+}

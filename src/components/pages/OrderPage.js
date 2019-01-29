@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+
 import PageWrapper from '../Utilities/PageWrapper'
 
 export default class OrderPage extends Component {
+  componentDidMount = () => {}
   render() {
     return (
       <PageWrapper
@@ -11,13 +13,15 @@ export default class OrderPage extends Component {
           cannonical: 'https://mano.pizza/order'
         }}
       >
-        <iframe
-          title="WeOrder"
-          className="WeOrder"
-          src="https://webshop.weorder.com/?restaurant=21908"
-          scrolling="yes"
-          frameBorder="0"
-        />
+        <div className="WeOrder">
+          <iframe
+            title="WeOrder"
+            className="WeOrder__frame"
+            src="https://webshop.weorder.com/?restaurant=21908"
+            scrolling="yes"
+            frameBorder="0"
+          />
+        </div>
       </PageWrapper>
     )
   }
