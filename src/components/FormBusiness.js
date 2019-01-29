@@ -73,7 +73,8 @@ export default class FormBusiness extends Component {
   }
   handleSubmit = e => {
     e.preventDefault()
-    const { canSubmit } = this.validateInputs()
+    const canSubmit = this.validateInputs()
+    console.log(canSubmit)
 
     if (canSubmit) {
       const data = {
