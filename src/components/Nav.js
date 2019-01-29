@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import cc from 'classcat'
 
+import { routes } from '../App'
+
 import { Consumer, Portal } from './Utilities'
 import Menu from './Menu'
 
@@ -21,10 +23,10 @@ export default class Nav extends Component {
               <div className="Nav__wrapper">
                 <Link
                   className="Nav__col Nav__col--order"
-                  to="/order"
+                  to={routes.order.path}
                   onClick={actions.closeMenu}
                 >
-                  Order
+                  {routes.order.name}
                 </Link>
                 <button
                   className="Nav__col Nav__col--menu"

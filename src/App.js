@@ -21,8 +21,8 @@ export const routes = {
     show: false
   },
   order: {
-    name: 'Order',
-    path: '/order',
+    name: 'Bestill',
+    path: '/bestill',
     component: OrderPage,
     exact: true,
     show: true
