@@ -41,6 +41,7 @@ import React, { Component, Fragment } from 'react'
 import { getImageFromId } from '../../utils/image'
 import { prepareSizes } from '../../utils/lazysizes'
 import uuid from 'uuid/v1'
+import { renderToStaticMarkup } from 'react-dom/server.browser'
 
 class Picture extends Component {
   render() {
@@ -67,7 +68,9 @@ class Picture extends Component {
           />
         </picture>
         <noscript>
-          <img src={this.props.srcset['1024']} alt={this.props.alt} />
+          {renderToStaticMarkup(
+            <img src={this.props.srcset['1024']} alt={this.props.alt} />
+          )}
         </noscript>
       </Fragment>
     )
