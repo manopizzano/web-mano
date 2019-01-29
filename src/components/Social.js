@@ -18,13 +18,13 @@ export default class Social extends Component {
           href="https://www.instagram.com/pizza_mano/"
           target="_blank"
           rel="noopener noreferrer"
-          arial-label="Mano sin instagram side"
+          aria-label="Mano sin instagram side"
         >
           <Icon
             className="Social__icon"
             name="instagram"
             color={dark ? '#facad5' : 'black'}
-            arial-label="Instagram icon"
+            aria-label="Instagram icon"
             alt="Instagram icon"
           />
         </a>
@@ -33,13 +33,13 @@ export default class Social extends Component {
           href="https://www.facebook.com/Manopizza/"
           target="_blank"
           rel="noopener noreferrer"
-          arial-label="Mano sin facebook side"
+          aria-label="Mano sin facebook side"
         >
           <Icon
             className="Social__icon"
             name="facebook"
             color={dark ? '#facad5' : 'black'}
-            arial-label="Facebook icon"
+            aria-label="Facebook icon"
             alt="Facebook icon"
           />
         </a>
