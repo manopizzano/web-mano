@@ -13,7 +13,7 @@ export default class FrontPage extends Component {
     return (
       <PageWrapper>
         <Hero />
-        <Divider illustration="chef" />
+        {/* <Divider illustration="chef" /> */}
         <Section id={menu.id} title={menu.title} desc={menu.desc} full>
           {menu.content}
         </Section>

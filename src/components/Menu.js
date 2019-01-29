@@ -8,6 +8,7 @@ import content from '../utils/content'
 import Header from './Header'
 import { Consumer, ScrollLink } from './Utilities'
 import Social from './Social'
+import Download from './Download'
 
 class Menu extends Component {
   render() {
@@ -41,8 +42,9 @@ class Menu extends Component {
               )
             }
           </Consumer>
-          <div className="Menu__item">
+          <div className="Menu__item editor">
             <Social className="Menu__social" dark />
+            <Download />
           </div>
         </nav>
       </div>
