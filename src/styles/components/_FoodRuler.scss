@@ -10,7 +10,7 @@
     border: $border--large;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 2em 2em 1.5em 0;
     @include spacing('sm', margin-bottom);
 

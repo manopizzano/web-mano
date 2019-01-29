@@ -6,11 +6,11 @@ export default class PageWrapper extends Component {
   render() {
     const { seo } = this.props
     return (
-      <main>
+      <div>
         <ScrollToTop />
         <SEO content={seo} />
         {this.props.children}
-      </main>
+      </div>
     )
   }
 }

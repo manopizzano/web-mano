@@ -1,7 +1,9 @@
 .Illustration {
   height: rem-calc(200);
+  width: rem-calc(200);
 
   @include bp(lg) {
     height: rem-calc(400);
+    width: rem-calc(400);
   }
 }

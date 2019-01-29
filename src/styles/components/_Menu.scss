@@ -10,6 +10,8 @@
   text-transform: uppercase;
   opacity: 0;
   animation: $trans fade-in both;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   &__content {
     @include minusHeaderHeight;
