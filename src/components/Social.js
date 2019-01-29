@@ -25,6 +25,7 @@ export default class Social extends Component {
             name="instagram"
             color={dark ? '#facad5' : 'black'}
             arial-label="Instagram icon"
+            alt="Instagram icon"
           />
         </a>
         <a
@@ -39,6 +40,7 @@ export default class Social extends Component {
             name="facebook"
             color={dark ? '#facad5' : 'black'}
             arial-label="Facebook icon"
+            alt="Facebook icon"
           />
         </a>
       </div>
