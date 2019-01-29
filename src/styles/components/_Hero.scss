@@ -3,11 +3,16 @@
   @include minusHeaderHeight;
   text-align: center;
   width: 100%;
-  @include spacing(lg, padding-bottom);
+  @include spacing(section, padding-bottom);
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 460px;
+
+  @include bp(md) {
+    min-height: 520px;
+    padding-top: 0;
+    justify-content: center;
+  }
 
   &__illustration {
     @include spacing(lg, margin-bottom);
