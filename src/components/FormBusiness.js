@@ -24,7 +24,7 @@ export default class FormBusiness extends Component {
       .join('&')
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value || e.target.checked
+      [e.target.name]: e.target.value
     })
   }
   handleCheckboxChange = e => {
