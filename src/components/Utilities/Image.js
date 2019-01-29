@@ -37,7 +37,7 @@
 //     )
 //   }
 // }
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { getImageFromId } from '../../utils/image'
 import { prepareSizes } from '../../utils/lazysizes'
 import uuid from 'uuid/v1'
@@ -46,25 +46,30 @@ class Picture extends Component {
   render() {
     const sizesPrepared = prepareSizes(this.props.srcset)
     return (
-      <picture>
-        {Object.keys(sizesPrepared.sizes).map(key => {
-          return (
-            <source
-              key={uuid('source')}
-              data-srcset={sizesPrepared.sizes[key]}
-              media={`(max-width:${key}px)`}
-            />
-          )
-        })}
-        <source data-srcset={sizesPrepared.main} />
-        <img
-          data-sizes="auto"
-          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-          className="lazyload"
-          alt={this.props.alt}
-          data-aspectratio={this.props.aspect}
-        />
-      </picture>
+      <Fragment>
+        <picture>
+          {Object.keys(sizesPrepared.sizes).map(key => {
+            return (
+              <source
+                key={uuid('source')}
+                data-srcset={sizesPrepared.sizes[key]}
+                media={`(max-width:${key}px)`}
+              />
+            )
+          })}
+          <source data-srcset={sizesPrepared.main} />
+          <img
+            data-sizes="auto"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            className="lazyload"
+            alt={this.props.alt}
+            data-aspectratio={this.props.aspect}
+          />
+        </picture>
+        <noscript>
+          <img src={this.props.srcset['1024']} alt={this.props.alt} />
+        </noscript>
+      </Fragment>
     )
   }
 }
