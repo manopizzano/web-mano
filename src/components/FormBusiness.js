@@ -230,11 +230,11 @@ export default class FormBusiness extends Component {
           {submitted && success && (
             <p>
               Takk for din hendvendelse. Vi kommer tilbake til deg ved første
-              anledning
+              anledning.
             </p>
           )}
           {submitted && error && (
-            <p>Beklager noe gikk feil. Vennligst prøv igjen</p>
+            <p>Beklager noe gikk feil. Vennligst prøv igjen.</p>
           )}
         </form>
       </div>
