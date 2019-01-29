@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import cc from 'classcat'
 import { emptyGif } from '../../utils/lazysizes'
+import keygen from 'uuid/v1'
+
+const key = keygen()
 
 const images = {
   cash: 'cash.png',
@@ -44,7 +47,7 @@ export default class Illustration extends Component {
   }
   componentWillUnmount = () => {
     if (!this.props.name) {
-      clearInterval(this.inteval)
+      clearInterval(this.interval)
     }
   }
   render() {
@@ -53,6 +56,7 @@ export default class Illustration extends Component {
     if (!image) return null
     return (
       <img
+        key={`random-image-${key}-${this.state.image}`}
         className={cc({
           lazyload: true,
           Illustration: true,
