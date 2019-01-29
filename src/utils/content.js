@@ -86,7 +86,7 @@ export default {
     ),
     content: (
       <div>
-        <Image id="pizzabox" />
+        <Image id="pizzabox" alt="Rosa Mano pizzaesker" />
       </div>
     )
   },
@@ -109,6 +109,7 @@ export default {
     ),
     content: (
       <a
+        aria-label="Mano Pizza plassering på google maps"
         href="https://www.google.com/maps/place/Pedersgata+8,+4013+Stavanger/@58.9702371,5.7378365,17z/"
         target="_blank"
         rel="noopener noreferrer"

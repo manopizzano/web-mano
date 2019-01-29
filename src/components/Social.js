@@ -18,6 +18,7 @@ export default class Social extends Component {
           href="https://www.instagram.com/pizza_mano/"
           target="_blank"
           rel="noopener noreferrer"
+          arial-label="Mano sin instagram side"
         >
           <Icon
             className="Social__icon"
@@ -30,6 +31,7 @@ export default class Social extends Component {
           href="https://www.facebook.com/Manopizza/"
           target="_blank"
           rel="noopener noreferrer"
+          arial-label="Mano sin facebook side"
         >
           <Icon
             className="Social__icon"

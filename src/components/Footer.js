@@ -17,6 +17,7 @@ export default class Footer extends Component {
           <p>
             Last ned appen <br />
             <a
+              arial-label="Last ned pizza mano appen på ios"
               href="https://itunes.apple.com/us/app/mano-pizza/id1449962930?mt=8&ign-mpt=uo%3D2"
               target="_blank"
               rel="noopener noreferrer"
@@ -25,6 +26,7 @@ export default class Footer extends Component {
             </a>{' '}
             &nbsp;&amp;&nbsp;
             <a
+              arial-label="Last ned pizza mano appen på google play"
               href="https://play.google.com/store/apps/details?id=com.snapporder.mano"
               target="_blank"
               rel="noopener noreferrer"
