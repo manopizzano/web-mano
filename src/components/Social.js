@@ -24,6 +24,7 @@ export default class Social extends Component {
             className="Social__icon"
             name="instagram"
             color={dark ? '#facad5' : 'black'}
+            arial-label="Instagram icon"
           />
         </a>
         <a
@@ -37,6 +38,7 @@ export default class Social extends Component {
             className="Social__icon"
             name="facebook"
             color={dark ? '#facad5' : 'black'}
+            arial-label="Facebook icon"
           />
         </a>
       </div>
