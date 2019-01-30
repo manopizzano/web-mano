@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
-// import { Link } from 'react-scroll'}
-
 import content from '../utils/content'
 
 import Header from './Header'
