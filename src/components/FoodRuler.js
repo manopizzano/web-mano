@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const price = 140
+const price = 125
 const increment = 0.25
 
 export default class FoodRuler extends Component {
