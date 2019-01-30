@@ -1,5 +1,7 @@
 .button {
   @include font-size(h3);
+  @include bold;
+  text-transform: uppercase;
   padding: 0.45em 2em 0.35em;
   background-color: transparent;
   color: white;
