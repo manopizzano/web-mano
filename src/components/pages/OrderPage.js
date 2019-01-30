@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import PageWrapper from '../Utilities/PageWrapper'
+import { VisuallyHidden } from '../Utilities'
 
 export default class OrderPage extends Component {
   componentDidMount = () => {}
@@ -13,6 +14,9 @@ export default class OrderPage extends Component {
           cannonical: 'https://mano.pizza/order'
         }}
       >
+        <VisuallyHidden>
+          <h1>Bestill take away pizza</h1>
+        </VisuallyHidden>
         <div className="WeOrder">
           <iframe
             title="WeOrder"
