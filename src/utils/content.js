@@ -52,7 +52,7 @@ export default {
       </Fragment>
     ),
     showInMenu: true,
-    title: 'Menu'
+    title: 'Meny'
   },
   business: {
     id: 'business',
