@@ -122,25 +122,5 @@ export default {
         />
       </a>
     )
-  },
-  privacy: {
-    title: 'Personvernerklæring',
-    desc: <p>Vi er veldig opptatt av ditt personvern</p>,
-    content: (
-      <div>
-        <section>
-          <h2>Skjema</h2>
-          <p>Vi lagrer din informasjon på epost.</p>
-        </section>
-        <section>
-          <h2>Google Analytics</h2>
-          <p>Tracking</p>
-        </section>
-        <section>
-          <h2>Facebook pixel</h2>
-          <p>Tracking</p>
-        </section>
-      </div>
-    )
   }
 }

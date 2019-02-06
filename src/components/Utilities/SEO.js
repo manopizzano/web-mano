@@ -8,7 +8,11 @@ class SEO extends Component {
       : 'MANO – PIZZA AL METRO'
     const description = this.props.content
       ? this.props.content.description
-      : 'Åpner snart i Stavanger!'
+      : `Mano betyr «hånd» og pizza er håndverk. Derfor lager vi den for hånd
+         på tradisjonelt napolitansk vis. Deigen hviler i minst ett døgn og
+         strekkes ut for hånd. Kombinert med vår egen pizzasaus av
+         Toscana-tomater,gir den lette og luftige deigen det vi synes er den
+         perfekte pizza.`
     const cannonical = this.props.content
       ? this.props.content.cannonical
       : 'https://mano.pizza'
