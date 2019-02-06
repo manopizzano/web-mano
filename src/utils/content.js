@@ -23,7 +23,7 @@ export default {
     showInMenu: false,
     desc: (
       <h3>
-        {data.address}, {data.city} <br /> Åpent mandag-søndag 10-22
+        {data.address}, {data.city}
       </h3>
     )
   },
@@ -96,7 +96,7 @@ export default {
     title: 'Kontakt',
     desc: (
       <Fragment>
-        <p>man-lør: 14:00-23:00</p>
+        {/* <p>man-lør: 14:00-23:00</p> */}
         <p>
           <a href={data.email}>{data.email}</a>
           <br />
