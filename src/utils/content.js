@@ -24,6 +24,10 @@ export default {
     desc: (
       <h3>
         {data.address}, {data.city}
+        <br />
+        Søndag-Torsdag 14-22 <br />
+        Fredag 14-23 <br />
+        Lørdag 13-23
       </h3>
     )
   },
@@ -97,6 +101,11 @@ export default {
     desc: (
       <Fragment>
         {/* <p>man-lør: 14:00-23:00</p> */}
+        <p>
+          Søndag-Torsdag 14-22 <br />
+          Fredag 14-23 <br />
+          Lørdag 13-23
+        </p>
         <p>
           <a href={data.email}>{data.email}</a>
           <br />
