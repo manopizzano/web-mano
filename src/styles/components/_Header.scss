@@ -1,6 +1,10 @@
 .Header {
   text-align: center;
 
+  &--hidden {
+    display: none;
+  }
+
   &__logo {
     @include bold;
     font-size: 23vw;

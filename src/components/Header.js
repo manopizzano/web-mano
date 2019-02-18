@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import cc from 'classcat'
+
 import { Consumer } from './Utilities'
 
-export default class Header extends Component {
+class Header extends Component {
   render() {
+    const currentPath = this.props.location.pathname
     return (
       <Consumer>
         {({ actions }) => (
-          <div className="Header" id="header">
+          <div
+            className={cc({
+              Header: true,
+              'Header--hidden': currentPath === '/bestill'
+            })}
+            id="header"
+          >
             <Link to="/" className="Header__logo" onClick={actions.closeMenu}>
               MANO
             </Link>
@@ -17,3 +27,5 @@ export default class Header extends Component {
     )
   }
 }
+
+export default withRouter(Header)
