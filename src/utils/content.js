@@ -4,6 +4,7 @@ import { Image } from '../components/Utilities'
 import FormBusiness from '../components/FormBusiness'
 import Food from '../components/Food'
 import FoodRuler from '../components/FoodRuler'
+import OpeningHours from '../components/OpeningHours'
 
 const data = {
   address: 'Pedersgt. 8',
@@ -25,9 +26,7 @@ export default {
       <h3>
         {data.address}, {data.city}
         <br />
-        Søndag-Torsdag 14-22 <br />
-        Fredag 14-23 <br />
-        Lørdag 13-23
+        <OpeningHours />
       </h3>
     )
   },
@@ -101,11 +100,7 @@ export default {
     desc: (
       <Fragment>
         {/* <p>man-lør: 14:00-23:00</p> */}
-        <p>
-          Søndag-Torsdag 14-22 <br />
-          Fredag 14-23 <br />
-          Lørdag 13-23
-        </p>
+        <OpeningHours />
         <p>
           <a href={data.email}>{data.email}</a>
           <br />

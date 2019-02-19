@@ -1,0 +1,11 @@
+.Allergy {
+  &__content {
+    border: $border--large;
+    width: 100%;
+    @include spacing('md', padding);
+  }
+
+  &__title {
+    @include spacing('md', margin-bottom);
+  }
+}

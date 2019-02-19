@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Loader, Error } from './Utilities'
 import FoodCategory from './FoodCategory'
+import Allergy from './Allergy'
 
 export default class FoodMenu extends Component {
   state = {
@@ -42,6 +43,7 @@ export default class FoodMenu extends Component {
           menu.map(category => (
             <FoodCategory category={category} key={category.id} />
           ))}
+        <Allergy />
       </div>
     )
   }
