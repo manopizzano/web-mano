@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import PageWrapper from '../Utilities/PageWrapper'
 import { VisuallyHidden } from '../Utilities'
@@ -18,6 +19,9 @@ export default class OrderPage extends Component {
           <h1>Bestill take away pizza</h1>
         </VisuallyHidden>
         <div className="WeOrder">
+          <Link to="/" className="WeOrder__button">
+            &larr; Home
+          </Link>
           <iframe
             title="WeOrder"
             className="WeOrder__frame"

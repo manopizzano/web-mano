@@ -11,6 +11,7 @@ import Illustration from './Illustration'
 import Section from './Section'
 import Error from './Error'
 import ScrollLink from './ScrollLink'
+import IsOrderPage from './IsOrderPage'
 
 export {
   Html,
@@ -26,5 +27,6 @@ export {
   Illustration,
   Section,
   Error,
-  ScrollLink
+  ScrollLink,
+  IsOrderPage
 }

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './utils/lazysizes'
 
-import { Provider } from './components/Utilities'
+import { Provider, IsOrderPage } from './components/Utilities'
 import Header from './components/Header'
 import FrontPageContainer from './containers/FrontPageContainer'
 import OrderPage from './components/pages/OrderPage'
@@ -48,7 +48,9 @@ class App extends Component {
     return (
       <Router>
         <Provider>
-          <Header />
+          <IsOrderPage>
+            <Header />
+          </IsOrderPage>
           <Switch>
             {Object.keys(routes).map(key => (
               <Route
@@ -60,8 +62,10 @@ class App extends Component {
             ))}
             <Route component={NoMatchPage} />
           </Switch>
-          <Nav />
-          <Footer />
+          <IsOrderPage>
+            <Footer />
+            <Nav />
+          </IsOrderPage>
         </Provider>
       </Router>
     )
