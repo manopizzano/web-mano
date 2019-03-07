@@ -67,13 +67,15 @@
 // Font mixins
 
 @mixin italic {
-  font-weight: 500;
+  font-weight: normal;
   font-style: italic;
+  font-family: 'Eurostile Italic';
 }
 
 @mixin bold {
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
+  font-family: 'Eurostile Bold';
 }
 
 @mixin headerHeight {

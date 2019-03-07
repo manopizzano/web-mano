@@ -87,6 +87,7 @@ hr {
 select {
   font-family: $f-sans;
   font-stretch: expanded;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.5;
+  @include bold;
 }
