@@ -16,7 +16,7 @@ export default class PrivacyPage extends Component {
           <div className="Article__content">
             <div>
               <section>
-                <h2>1. Scope</h2>
+                <h3>1. Scope</h3>
                 <p>
                   This Privay Policy apply to all processing of personal data in
                   relation to the MANO PIZZA website and webshop (the
@@ -29,7 +29,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>2. Roles and responsibilities</h2>
+                <h3>2. Roles and responsibilities</h3>
                 <p>
                   MANO PIZZA (the "Seller of Goods")is the Data Controller for
                   personal data about Users, which are collected and used for
@@ -46,7 +46,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>3. Information we collect and receive</h2>
+                <h3>3. Information we collect and receive</h3>
                 <p>
                   Personal data will be processed when you register an account
                   in the app or webshop and subsequently when you order a
@@ -90,7 +90,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>4. Purposes and legal basis for use of personal data</h2>
+                <h3>4. Purposes and legal basis for use of personal data</h3>
                 <p>
                   The Seller of Goods may process personal data about Users for
                   the following purposes:
@@ -137,7 +137,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>5. Cookies and traffic data</h2>
+                <h3>5. Cookies and traffic data</h3>
                 <p>
                   The Seller of Goods and the Service Provider uses pixels, or
                   transparent GIF files, to analyse use of the Service, for the
@@ -163,7 +163,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>6. Deletion</h2>
+                <h3>6. Deletion</h3>
                 <p>
                   Personal data is deleted when there is no longer a need to
                   process the personal data for the purpose for which they were
@@ -178,7 +178,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>7. Payment</h2>
+                <h3>7. Payment</h3>
                 <p>
                   Our partners handle payment in the Service. These partners may
                   collect your payment card information to facilitate payment.
@@ -189,7 +189,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>8. Disclosure to third parties</h2>
+                <h3>8. Disclosure to third parties</h3>
                 <p>
                   he Seller of Goods or the Service Provider will not, without
                   your prior consent, disclose your personal data to anyone,
@@ -216,7 +216,7 @@ export default class PrivacyPage extends Component {
                 </ul>
               </section>
               <section>
-                <h2>9. Market communications</h2>
+                <h3>9. Market communications</h3>
                 <p>
                   We may ask for your consent to use your personal data to
                   contact you regarding products and services offered by the
@@ -228,7 +228,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>10. Age limitations</h2>
+                <h3>10. Age limitations</h3>
                 <p>
                   To the extent prohibited by applicable law, use of the Service
                   by anyone younger than 16 years old is forbidden. If you learn
@@ -238,7 +238,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>11. Security of information</h2>
+                <h3>11. Security of information</h3>
                 <p>
                   We are committed to protecting your privacy. We use various
                   security technologies and procedures to help protect your
@@ -256,7 +256,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>12. Your rights</h2>
+                <h3>12. Your rights</h3>
                 <p>
                   You have the right to request deletion or corrections to be
                   made to personal data held by us. You may as well object to
@@ -276,7 +276,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>13. Updating our privacy Policy</h2>
+                <h3>13. Updating our privacy Policy</h3>
                 <p>
                   We may from time to time and at our own discretion, update
                   this Privacy Policy. We will in such case provide clear
@@ -284,7 +284,7 @@ export default class PrivacyPage extends Component {
                 </p>
               </section>
               <section>
-                <h2>14. Contact us</h2>
+                <h3>14. Contact us</h3>
                 <p>
                   Please send us an email if you have any questions, concerns or
                   comments regarding this Privacy Policy or to our processing of

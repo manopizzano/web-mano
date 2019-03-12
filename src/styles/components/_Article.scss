@@ -1,5 +1,6 @@
 .Article {
   @extend .container;
+  @include spacing('section', 'margin-top');
 
   &__header {
     @include content-width(text);
