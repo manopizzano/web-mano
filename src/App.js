@@ -6,7 +6,7 @@ import './utils/lazysizes'
 import { Provider, IsOrderPage } from './components/Utilities'
 import Header from './components/Header'
 import FrontPageContainer from './containers/FrontPageContainer'
-import OrderPage from './components/pages/OrderPage'
+// import OrderPage from './components/pages/OrderPage'
 import PrivacyPage from './components/pages/PrivacyPage'
 import NoMatchPage from './components/pages/NoMatchPage'
 import Nav from './components/Nav'
@@ -20,13 +20,13 @@ export const routes = {
     exact: true,
     show: false
   },
-  order: {
-    name: 'Bestill',
-    path: '/bestill',
-    component: OrderPage,
-    exact: true,
-    show: true
-  },
+  // order: {
+  //   name: 'Bestill',
+  //   path: '/bestill',
+  //   component: OrderPage,
+  //   exact: true,
+  //   show: true
+  // },
   privacy: {
     name: 'Privacy',
     path: '/personvern',
