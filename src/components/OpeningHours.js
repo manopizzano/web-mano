@@ -14,14 +14,19 @@ export default class OpeningHours extends Component {
       //   <dd className="OpeningHours__data">14-22</dd>
       // </dl>
       <p className="OpeningHours">
-        Man-tors 14-21
+        Mandag 14-21
         <br />
-        Fredag 14-23
+        Tirsdag 14-21
         <br />
-        Lørdag 12-23
+        Onsdag 14-21
         <br />
-        Søndag 14-22
+        Torsdag 11-22
         <br />
+        Fredag 11-22
+        <br />
+        Lørdag 12-22
+        <br />
+        Søndag 12-22
       </p>
     )
   }
