@@ -9,5 +9,9 @@
     @include bold;
     font-size: 23vw;
     line-height: 1;
+
+    @include bp(xxl) {
+      line-height: 0.8;
+    }
   }
 }

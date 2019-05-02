@@ -1,6 +1,7 @@
 .Hero {
   @extend .container;
-  @include minusHeaderHeight;
+  // @include minusHeaderHeight;
+  min-height: 100vh;
   text-align: center;
   width: 100%;
   @include spacing(section, padding-bottom);
@@ -9,7 +10,7 @@
   flex-direction: column;
 
   @include bp(md) {
-    min-height: 520px;
+    // min-height: 520px;
     padding-top: 0;
     justify-content: center;
   }
