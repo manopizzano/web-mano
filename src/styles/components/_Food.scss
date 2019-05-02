@@ -36,7 +36,8 @@
   }
 
   &__item-header {
-    @include font-size(h3);
+    @include font-size(h4);
+    font-size: 1rem;
     @include bold;
     display: flex;
     justify-content: space-between;
@@ -45,11 +46,13 @@
 
   &__item-title {
     flex-grow: 1;
+    hyphens: auto;
     @include spacing(md, padding-right);
   }
 
   &__item-price {
-    @include font-size(h3);
+    @include font-size(h4);
+    font-size: 1rem;
     @include bold;
   }
 }
