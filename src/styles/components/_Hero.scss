@@ -1,7 +1,6 @@
 .Hero {
   @extend .container;
-  // @include minusHeaderHeight;
-  min-height: 100vh;
+  @include minusHeaderMinHeight;
   text-align: center;
   width: 100%;
   @include spacing(section, padding-bottom);
@@ -19,6 +18,10 @@
     @include spacing(lg, margin-bottom);
     margin-left: auto;
     margin-right: auto;
+
+    @include bp(md) {
+      @include spacing(lg, margin-top);
+    }
   }
 
   &__title {
