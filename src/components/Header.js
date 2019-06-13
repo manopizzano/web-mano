@@ -10,7 +10,7 @@ export default class Header extends Component {
         {({ actions }) => (
           <div className="Header" id="header">
             <Link to="/" className="Header__logo" onClick={actions.closeMenu}>
-              MAN
+              MANO
             </Link>
           </div>
         )}
