@@ -34,7 +34,7 @@ export default class Nav extends Component {
                   rel="noopener noreferrer"
                   className="Nav__col Nav__col--order"
                 >
-                  Bestill
+                  ORDERRRRRR
                 </a>
                 <button
                   className="Nav__col Nav__col--menu"
