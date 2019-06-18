@@ -32,12 +32,20 @@
     &--order,
     &--menu {
       @include bold;
-      font-size: 160%;
+      font-size: 200%;
       // @include bp(xxl) {
       //   @include font-size(h2);
       // }
     }
-
+    @media (max-width: 500px) {
+      &--order,
+      &--menu {
+        @include bold;
+        font-size: 120%;
+        // @include bp(xxl) {
+        //   @include font-size(h2);
+        // }
+      }
     &--menu {
       position: relative;
       text-align: right;
