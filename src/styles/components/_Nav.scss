@@ -42,11 +42,14 @@
       &--menu {
         @include bold;
         font-size: 100%;
-        right: 1rem;
         // @include bp(xxl) {
         //   @include font-size(h2);
         // }
       }
+      &--menu {
+        right: 0.3rem;
+      }
+
     }
     &--menu {
       position: relative;
