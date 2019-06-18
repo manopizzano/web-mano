@@ -40,7 +40,7 @@ export default class Nav extends Component {
                   className="Nav__col Nav__col--menu"
                   onClick={actions.toggleMenu}
                 >
-                  {state.showMenu ? 'Lukk' : 'Meny'}
+                  {state.showMenu ? 'Lukk' : 'Oversikt'}
                 </button>
               </div>
             </nav>
