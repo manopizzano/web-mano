@@ -8,6 +8,8 @@ export default class FormBusiness extends Component {
     companyName: '',
     email: '',
     desc: '',
+    orgnmr: '',
+    postcode:'',
     companyNameError: '',
     gdpr: false,
     gdprError: '',
@@ -35,9 +37,14 @@ export default class FormBusiness extends Component {
   validateInputs = () => {
     const { companyName, email, desc, gdpr } = this.state
     let canSubmit = false
+    let com = false;
+    let em = false;
+    let des = false;
+    let chk = false
 
     if (companyName.length > 1) {
       canSubmit = true
+      com = true
       this.setState({ companyNameError: null })
     } else {
       canSubmit = false
@@ -47,6 +54,7 @@ export default class FormBusiness extends Component {
     var re = /\S+@\S+\.\S+/
     if (re.test(email)) {
       canSubmit = true
+      em = true
       this.setState({ emailError: null })
     } else {
       canSubmit = false
@@ -55,32 +63,43 @@ export default class FormBusiness extends Component {
 
     if (desc.length > 1) {
       canSubmit = true
+      des = true
       this.setState({ descError: null })
     } else {
       canSubmit = false
       this.setState({ descError: 'Det mangler en beskrivelse' })
     }
 
-    if (gdpr) {
-      canSubmit = true
-      this.setState({ gdprError: null })
-    } else {
-      canSubmit = false
-      this.setState({ gdprError: 'Du må huke av over for å sende skjema' })
+    
+      if (gdpr) {
+        canSubmit = true
+        chk = true
+        this.setState({ gdprError: null })
+      } else {
+        canSubmit = false
+        this.setState({ gdprError: 'Du må huke av over for å sende skjema' })
+      
     }
+
+    if(com && em && des && chk){
+      canSubmit = true
+    }else canSubmit = false
 
     return canSubmit
   }
   handleSubmit = e => {
     e.preventDefault()
     const canSubmit = this.validateInputs()
-    console.log(canSubmit)
+    debugger
+    console.log(canSubmit, this.state.email)
 
     if (canSubmit) {
       const data = {
         companyName: this.state.companyName,
         email: this.state.email,
-        desc: this.state.desc
+        desc: this.state.desc,
+        postcode: this.state.postcode,
+        orgnmr: this.state.orgnmr
       }
       fetch('/', {
         method: 'POST',
@@ -118,6 +137,8 @@ export default class FormBusiness extends Component {
     const {
       companyName,
       email,
+      orgnmr,
+      postcode,
       desc,
       gdpr,
       companyNameError,
@@ -153,13 +174,31 @@ export default class FormBusiness extends Component {
                   type="text"
                   id="companyName"
                   name="companyName"
-                  placeholder="Navn på selskapet"
+                  placeholder="Navn på selskapet *"
                   value={companyName}
                   onChange={this.handleChange}
                 />
                 {companyNameError && (
                   <p className="Form__message">{companyNameError}</p>
                 )}
+              </div>
+              <div className="Form__block">
+                <VisuallyHidden>
+                  <label htmlFor="orgnmr">Epost</label>
+                </VisuallyHidden>
+                <input
+                  className={cc({
+                    Form__input: true,
+                    'Form__input--error': emailError
+                  })}
+                  type="number"
+                  id="orgnmr"
+                  name="orgnmr"
+                  placeholder="Organisasjonsnummer"
+                  value={orgnmr}
+                  onChange={this.handleChange}
+                />
+                
               </div>
               <div className="Form__block">
                 <VisuallyHidden>
@@ -173,12 +212,31 @@ export default class FormBusiness extends Component {
                   type="text"
                   id="email"
                   name="email"
-                  placeholder="Epost"
+                  placeholder="Epost *"
                   value={email}
                   onChange={this.handleChange}
                 />
                 {emailError && <p className="Form__message">{emailError}</p>}
               </div>
+               
+              <div className="Form__block">
+                <VisuallyHidden>
+                  <label htmlFor="postcode">Epost</label>
+                </VisuallyHidden>
+                <input
+                  className={cc({
+                    Form__input: true,
+                    'Form__input--error': emailError
+                  })}
+                  type="text"
+                  id="postcode"
+                  name="postcode"
+                  placeholder="Leveringsadresse"
+                  value={postcode}
+                  onChange={this.handleChange}
+                />
+              </div>
+             
               <div className="Form__block">
                 <VisuallyHidden>
                   <label htmlFor="desc">
@@ -193,12 +251,13 @@ export default class FormBusiness extends Component {
                   type="text"
                   id="desc"
                   name="desc"
-                  placeholder="Kort beskrivelse av det du ønsker"
+                  placeholder="Kort beskrivelse av det du ønsker *"
                   value={desc}
                   onChange={this.handleChange}
                 />
                 {descError && <p className="Form__message">{descError}</p>}
               </div>
+              
               <div className="Form__block">
                 <label className="Form__label">
                   <input
