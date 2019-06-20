@@ -8,7 +8,7 @@ export default class FormBusiness extends Component {
     companyName: '',
     email: '',
     desc: '',
-    orgnmr: '',
+    orgNumber: '',
     postcode:'',
     companyNameError: '',
     gdpr: false,
@@ -99,7 +99,7 @@ export default class FormBusiness extends Component {
         email: this.state.email,
         desc: this.state.desc,
         postcode: this.state.postcode,
-        orgnmr: this.state.orgnmr
+        orgNumber: this.state.orgNumber
       }
       fetch('/', {
         method: 'POST',
@@ -137,7 +137,7 @@ export default class FormBusiness extends Component {
     const {
       companyName,
       email,
-      orgnmr,
+      orgNumber,
       postcode,
       desc,
       gdpr,
@@ -184,18 +184,17 @@ export default class FormBusiness extends Component {
               </div>
               <div className="Form__block">
                 <VisuallyHidden>
-                  <label htmlFor="orgnmr">Epost</label>
+                  <label htmlFor="orgNumber">Organisasjonsnummer</label>
                 </VisuallyHidden>
                 <input
                   className={cc({
-                    Form__input: true,
-                    'Form__input--error': emailError
+                    Form__input: true
                   })}
                   type="number"
-                  id="orgnmr"
-                  name="orgnmr"
+                  id="orgNumber"
+                  name="orgNumber"
                   placeholder="Organisasjonsnummer"
-                  value={orgnmr}
+                  value={orgNumber}
                   onChange={this.handleChange}
                 />
                 
@@ -221,12 +220,11 @@ export default class FormBusiness extends Component {
                
               <div className="Form__block">
                 <VisuallyHidden>
-                  <label htmlFor="postcode">Epost</label>
+                  <label htmlFor="postcode">Leveringsadresse</label>
                 </VisuallyHidden>
                 <input
                   className={cc({
-                    Form__input: true,
-                    'Form__input--error': emailError
+                    Form__input: true
                   })}
                   type="text"
                   id="postcode"
