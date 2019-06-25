@@ -8,14 +8,13 @@
   text-align: center;
 
   @include bp(md) {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   &__col {
     @extend .editor;
     width: 100%;
-    margin-bottom: spacing(md, sm);
-
+    
     @include bp(md) {
       width: calc(100% / 3);
     }
